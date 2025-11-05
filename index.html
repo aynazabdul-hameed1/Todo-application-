@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo application </title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo Application</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
 </head>
 
-<body class="bg-success-subtle  text-center">
-    <h1 class="mt-5 display-3 text-success">Todo Application</h1>
-    <div class="p-2 mt-5 border border-success mb-4">
-    <input class="input rounded"  placeholder="Enter Text..." id="todo" type="text" />
-    <button class="btn m-4 btn-outline-success" onclick="addTodo()">Add Todo</button>
-    <button class="btn  btn-outline-success" onclick="deleteAll()">Delete All</button>
+<body class="bg-success-subtle text-center py-5">
+  <div class="container">
+    <h1 class="display-4 text-success mb-5">Todo Application</h1>
+
+    <div class="input-group mb-4 justify-content-center">
+      <input type="text" id="todo" class="form-control w-50 border-success" placeholder="Enter your task..." />
+      <button class="btn btn-outline-success" onclick="addTodo()">Add Todo</button>
+      <button class="btn btn-outline-danger" onclick="deleteAll()">Delete All</button>
     </div>
-    <ul  id="todoList">
 
-    </ul>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <ul id="todoList" class="list-group w-50 mx-auto shadow-sm"></ul>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
 </body>
-
 </html>

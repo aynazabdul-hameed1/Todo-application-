@@ -1,8 +1,11 @@
-.input{
-    border: 1px solid green;
-    background-color: rgb(209, 231, 221);
-    height: 37px;
-    width: 300px;
-    outline: none;
-    color: green;
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+#todoList li {
+  transition: all 0.3s ease;
+}
+
+#todoList li:hover {
+  background-color: rgb(232, 249, 238);
 }
